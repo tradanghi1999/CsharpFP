@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1CCB6629-8760-4AD7-BD1F-237B0681BBB1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleView</RootNamespace>
-    <AssemblyName>ConsoleView</AssemblyName>
+    <ProjectGuid>{88FE7893-AB2F-4135-8F41-2C7C27AAA0E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExchangeAPI</RootNamespace>
+    <AssemblyName>ExchangeAPI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -44,44 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="DataAPI.cs" />
+    <Compile Include="DataMapper.cs" />
+    <Compile Include="ExchangeApiMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassConverter\ClassConverter.csproj">
-      <Project>{08a3d098-12af-4e3b-bf6a-e1bd2e6aa0f4}</Project>
-      <Name>ClassConverter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary1\Entities.csproj">
-      <Project>{21075610-6479-4a47-8c2a-96eac3a67067}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DateLife\DateLife.csproj">
-      <Project>{18e0bbb3-2a13-499f-ade4-c546953a971e}</Project>
-      <Name>DateLife</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ExchangeAPI\ExchangeAPI.csproj">
-      <Project>{88fe7893-ab2f-4135-8f41-2c7c27aaa0e3}</Project>
-      <Name>ExchangeAPI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ExchangeConverter\ExchangeConverter.csproj">
-      <Project>{6604e513-1c61-4c8f-8d65-df66c0b0539a}</Project>
-      <Name>ExchangeConverter</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ExchangeInteractor\ExchangeInteractor.csproj">
       <Project>{66a91f8d-7a12-4de2-b1f4-1dbd9462224b}</Project>
       <Name>ExchangeInteractor</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SqlClient\SqlClient.csproj">
-      <Project>{6029f0d4-9ad1-4218-ae87-459bad6d6d56}</Project>
-      <Name>SqlClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Utils\Utils.csproj">
-      <Project>{403701e4-c0ab-4d69-9229-0974866f24e1}</Project>
-      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

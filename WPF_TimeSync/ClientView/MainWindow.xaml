@@ -26,17 +26,27 @@
             
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-               
-                    <Grid Grid.Column="1">
+
+                    <Expander Grid.Column="0">
+                        <Grid 
+                              Background="Black"
+                              Margin="10"
+                          
+                              >
+
+                        </Grid>
+                    </Expander>
+                    
+                    <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <WrapPanel Grid.Row="0">
-
+                
                         <Viewbox Stretch='Uniform'>
                             <TextBlock 
                                 Style="{StaticResource QuestionTextStyle}"

@@ -16,20 +16,23 @@ namespace Utils
         public Func<double, string> bmiEval = (bmiRes) =>
             bmiRes >= 25 ? "Overweight" : bmiRes >= 18.5 ? "Healthy" : "Underweight";
 
+        public string doRep(int x,int n)
+        {
+            var y = "";
+            if (n == 0)
+                return "";
+            else
+            {
+                y = doRep(x, n - 1);
+                Console.WriteLine(y);
+                y += x;
+                return y;
+            }    
+ 
+        }
 
-        //public R Map<T1, T2, T3, R>(Func<T3, R> f1, Func<T1, T2, T3> f2, T1 t1,T2 t2)
-        //    => f1(f2(t1, t2));
 
-       
-
-
-
-
-
-
-
-
-
+        
 
     }
 }
